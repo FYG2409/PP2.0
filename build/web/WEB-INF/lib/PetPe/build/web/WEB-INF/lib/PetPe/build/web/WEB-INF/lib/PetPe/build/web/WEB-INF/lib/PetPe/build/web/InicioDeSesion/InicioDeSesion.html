@@ -1,0 +1,25 @@
+<html>
+     <head>
+        <title>Inicia Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK REL=StyleSheet HREF="../DocumentosCSS/InicioDeSesion.css" TYPE="text/css" MEDIA=screen> 
+        <script src="../JavaScript/Registro.js"></script>
+     </head>
+    <body>
+        <section>
+        <div class="titulo"><h1>PetPetition</h1></div>
+        <div class="container">
+            <div class="form_content"><div class="Ima"></div></div>
+            <div class="login_form">
+                <div class="ingresar"><h1 align="center">Ingresar</h1></div>
+            <form name="Regis"  method="post" action="../JPS/InicioSesion.jsp">
+                <input type="text" name="nomUsua"  required="" placeholder="NickName" maxlength="25" onkeyup="mayus(this);" required/>
+                <input type="password" name="contrasenia" required="" placeholder="Contraseña" maxlength="20" required/>
+                
+                <input type="submit" name="Ingresar" value="Inicia Sesion">
+            </form>
+        </div>
+       </div>
+        </section>
+</html>

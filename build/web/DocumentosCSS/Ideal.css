@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+*{
+    margin: 0px;
+    padding: 0px;
+   font-family: 'Poor Story', cursive;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../Resourses/Images/fondi.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.titulo{
+    margin-top: 5%;
+    font-family: 'Poor Story';
+    font-size: 5em;
+    color: white;
+}
+header{
+    margin: auto;
+    margin-top: 8%;
+    width: 1200px;
+    height: 230px;
+    background-color: rgba(250, 244, 227, 0.6);
+    box-shadow: 0px 0px 70px 4px white;
+    border-radius: 20px;
+}
+
+div.contenedor{
+    width: 200px;
+    height: 230px;
+    -webkit-transition: height .4s;
+    float: left;
+    
+}
+div#uno{
+    background-color: #00cc33;
+    border-radius: 20px;
+}
+div#dos{
+    background-color: #009966;
+     border-radius: 20px;
+}
+div#tres{
+    background-color:#3399ff;
+     border-radius: 20px;
+}
+div#cuatro{
+    background-color: #0066ff;
+     border-radius: 20px;
+}
+div#cinco{
+    background-color: #6600ff;
+     border-radius: 20px;
+}
+div#seis{
+    background-color: #990099;
+     border-radius: 20px;
+}
+#h{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 50px auto;
+    background-color: rgba(355,255,255,.4);
+    padding: 20px;
+    -webkit-border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+    -webkit-transition: box-shadow .4s;
+}
+ a{
+    padding: 26px;
+    font-size: 20px;
+    color: white;
+}
+
+p.texto{
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    padding-top: 2px;
+    opacity: .6;
+    -webkit-transition: padding-top .4s;
+}
+div.contenedor:hover{
+    height: 280px;
+    border-radius: 0px 0px 20px 20px;
+    -webkit-transition: height .5s, border-radius .5s;
+    -webkit-transition-timing-function: linear;
+}
+div.contenedor:hover p.texto{
+    padding-top: 30px;
+    opacity: 1;
+}
+div.contenedor:hover #h{
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,.6);
+}

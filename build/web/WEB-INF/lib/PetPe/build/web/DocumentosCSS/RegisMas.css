@@ -1,0 +1,68 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+div {
+    float:left;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.uno{
+    background-color: #a70000;
+    height: 10%; 
+    width: 100%;
+}
+.boton{
+    background-color:#006666;
+    color: white; 
+    font-family:'Century Gothic';
+    width: 150px; 
+    height: 35px;
+}
+
+#arriba{
+    font-family: Stencil;
+    font-size: 4em;
+    background-image: url("../Resourses/Images/b.jpg");
+}
+
+#derecho{
+    background-color: white;
+    margin-left:80px;
+    margin-top:10px;
+    margin-right:20px;
+    font-family: Century Gothic;
+    height: 87.5%; 
+    width: 42.5%;
+}
+#derechod{
+    background-image: url("../Resourses/Images/fondo2.jpg");
+    padding-left:80px;
+    padding-top:45px;   
+    font-family: Century Gothic;
+    height: 92%; 
+    width: 19%;
+}
+#izquierdo{
+    background-image: url("../Resourses/Images/fondo2.jpg");
+    padding-left:80px;
+    padding-top:50px;   
+    font-family: STENCIL;
+    font-size: 3em;
+    color: white;
+    height: 92%; 
+    width: 19%;
+}
+.radio{
+    color: white; 
+    font-family:'Century Gothic';
+    width: 30px; 
+    height: 20px;
+}
+.boton:hover{
+    color: turquoise;
+    background: crimson;
+}
+

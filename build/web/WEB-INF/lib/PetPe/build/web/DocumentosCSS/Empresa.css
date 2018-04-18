@@ -1,0 +1,19 @@
+div{
+    position: initial;
+    float: left;
+}
+#Vision, #Mision, #Valores, #Objetivos {
+    height: 100%;
+    width: 100%;
+    background: url(../Resourses/Images/b1.jpg);
+    border-color: transparent;
+    font-family: Century Gothic;
+    color: white;
+    font-size: 30px;
+}
+#Vision:hover, #Mision:hover, #Objetivos:hover, #Valores:hover {
+    color: white;
+    border-color: transparent;
+    background: url(../Resourses/Images/b2.jpg);
+    cursor: pointer;
+}

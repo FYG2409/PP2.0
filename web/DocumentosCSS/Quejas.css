@@ -1,0 +1,12 @@
+body{
+    background: url(../Resourses/Images/back.jpeg)
+}
+div{
+    float: left;
+    position: initial;
+    padding-left: 40px;
+}
+#Comentario{
+    width: 90%;
+    height: 40%;
+}

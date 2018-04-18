@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Quejas y sugerencias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=StyleSheet href="../DocumentosCSS/Quejas.css" type="text/css" media=screen>
+        <script>
+            function alertar()
+            {
+                alert("Le agradecemos sus comentarios.");
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width: 90%; height: 100%">
+            <div style="height: 100%; width: 40%; background: azure; border: 2px solid black">
+                <br><br>
+                <textarea id="Comentario"></textarea>
+                <br>
+                <input type="button" id="Enviar" value="Enviar" name="Enviar" onclick="alertar()">
+                <br>
+                <center><p>Aún no hay preguntas/comentarios respondidos.</p></center>
+            </div>
+            <div style="height: 50%; width: 50%">
+                <div style="height: 100%; width: 100%">
+                    <br><br><br>
+                    <center><img src="../Resourses/Images/logoPP.png" alt="Coco" width="200" height="200" ></center>
+                </div>
+                <div style="height: 50%; width: 100%; background: azure; border: 2px solid black ">
+                    <center>
+                        <h3>Califica nuestro servicio...</h3>
+                        <input type="radio" name="calif"> Excelente
+                        <input type="radio" name="calif"> Bueno
+                        <input type="radio" name="calif"> Regular
+                        <input type="radio" name="calif"> Malo
+                    </center>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
