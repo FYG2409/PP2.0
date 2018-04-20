@@ -3,39 +3,33 @@
         <title>Quejas y sugerencias</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel=StyleSheet href="../DocumentosCSS/Quejas.css" type="text/css" media=screen>
-        <script>
-            function alertar()
-            {
-                alert("Le agradecemos sus comentarios.");
-            }
-        </script>
+        <link rel=StyleSheet href="../DocumentosCSS/EQuejas.css" type="text/css" media=screen>
     </head>
     <body>
-        <div style="width: 90%; height: 100%">
-            <div style="height: 100%; width: 40%; background: azure; border: 2px solid black">
-                <br><br>
-                <textarea id="Comentario"></textarea>
-                <br>
-                <input type="button" id="Enviar" value="Enviar" name="Enviar" onclick="alertar()">
-                <br>
-                <center><p>Aún no hay preguntas/comentarios respondidos.</p></center>
-            </div>
-            <div style="height: 50%; width: 50%">
-                <div style="height: 100%; width: 100%">
-                    <br><br><br>
-                    <center><img src="../Resourses/Images/logoPP.png" alt="Coco" width="200" height="200" ></center>
-                </div>
-                <div style="height: 50%; width: 100%; background: azure; border: 2px solid black ">
-                    <center>
-                        <h3>Califica nuestro servicio...</h3>
-                        <input type="radio" name="calif"> Excelente
-                        <input type="radio" name="calif"> Bueno
-                        <input type="radio" name="calif"> Regular
-                        <input type="radio" name="calif"> Malo
-                    </center>
-                </div>
-            </div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <center>
+        <div class="mensaje">
+            <center><p class="titulo">PONTE EN CONTACTO CON NOSOTROS</p></center><br>
+            Queja<input type="radio" name="radio" value="Queja"> Sugerencia<input type="radio" name="radio" value="Sugerencia"> Duda<input type="radio" name="radio" value="Duda">
+            <form action="/JPS/EnvioEmail.jsp" method="post">
+                <input type="email" class="texto" id="correo" name="de" placeholder="Correo electronico" required>
+                <input type="password" class="texto" id="contra" name="contra" placeholder="Contraseña" required><br><br>
+                <textarea id="texto" name="contenido" placeholder="Deja aqui tu mensaje" required></textarea>
+                <input type="submit" id="Enviar" value="Enviar" name="Enviar"><br>
+                <p class="notas">*La contraseña debe coincidir con la contraseña del correo electronico propocionado anteriormente</p>
+                <p class="notas">Los datos proporcionados seran enviados al administrador de la pagina con el fin de contribuir al desarrollo de la misma, cualquier dato proporcionado sera exclusivo para el envio del mismo</p>
+            </form>
+        </div>
+        </center>
+        <div class="comentario">
+            <div class="fb-comments" data-href="http://localhost:8084/Quejas/Quejas.html" data-width="600" data-numposts="5"></div>
         </div>
     </body>
 </html>

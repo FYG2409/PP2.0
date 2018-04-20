@@ -44,5 +44,3 @@ end if;
 select Id_Mas as Id_Mascota, xN_Mas as Nombre, xSex_Mas as Sexo ,xTipo as Tipo, xRaza as Raza,
  xEdad as Edad, xDesc as Descripcion, xColonia as Colonia, xDeleg as Delegacion, xImg as Imagen,  xMsj;
 end**;
-
-call sp_Consulta_Masc(1); 

@@ -3,10 +3,10 @@
 -- Host: localhost    Database: pp
 -- ------------------------------------------------------
 -- Server version	5.7.20-log
+drop database PP;
+create database PP;
+use PP;
 
-drop database pp;
-create database pp;
-use pp;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -31,7 +31,7 @@ CREATE TABLE `cat_colonias` (
   `Nom_Colonia` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id_Colonia`),
   KEY `Id_Delegacion` (`Id_Delegacion`),
-  CONSTRAINT `cat_colonias_ibfk_1` FOREIGN KEY (`Id_Delegacion`) REFERENCES `cat_delegaciones` (`Id_Delegacion`)
+  CONSTRAINT `cat_colonias_ibfk_1` FOREIGN KEY (`Id_Delegacion`) REFERENCES `cat_delegaciones`(`Id_Delegacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,10 +41,17 @@ CREATE TABLE `cat_colonias` (
 
 LOCK TABLES `cat_colonias` WRITE;
 /*!40000 ALTER TABLE `cat_colonias` DISABLE KEYS */;
-INSERT INTO `cat_colonias` VALUES (1,1,'Paraje San Juan'),(2,1,'Progresista'),(3,2,'Acueducto'),(4,2,'Altavista');
+INSERT INTO `cat_colonias` VALUES (1,1,'Paraje San Juan'),(2,1,'Alborada'),
+(3,1,'Benito Juarez'),(4,1,'Buenavista'),(5,1,'Anastacio Bustamante'),
+(6,2,'San Angel'),(7,2,'Bella Vista'),(8,2,'Los Alpes'),(9,2,'Campestre'),
+(10,3,'Santa Anita'),(11,3,'El rodeo'),(12,3,'Fraccionamiento Coyuya'),(13,4,'Altavista')
+,(14,4,'Barrio 18'),(15,4,'Col. La Concha'),(16,5,'Cantil del Pedregal'),(17,5,'Bosques de Tetlamaya'),
+(18,5,'Ajusco'),(19,5,'Copilco El Alto');
 /*!40000 ALTER TABLE `cat_colonias` ENABLE KEYS */;
 UNLOCK TABLES;
-
+select * from cat_colonias;
+describe cat_colonias;
+show table status;
 --
 -- Table structure for table `cat_delegaciones`
 --
@@ -65,7 +72,8 @@ CREATE TABLE `cat_delegaciones` (
 
 LOCK TABLES `cat_delegaciones` WRITE;
 /*!40000 ALTER TABLE `cat_delegaciones` DISABLE KEYS */;
-INSERT INTO `cat_delegaciones` VALUES (1,'Iztapalapa'),(2,'Alvaro Obregon'),(3,'Iztacalco'),(4,'Xochimilco'),(5,'Coyoacancat_colonias');
+INSERT INTO `cat_delegaciones` VALUES (1,'Iztapalapa'),(2,'Alvaro Obregon'),
+(3,'Iztacalco'),(4,'Xochimilco'),(5,'Coyoacan');
 /*!40000 ALTER TABLE `cat_delegaciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,10 +100,14 @@ CREATE TABLE `cat_razas` (
 
 LOCK TABLES `cat_razas` WRITE;
 /*!40000 ALTER TABLE `cat_razas` DISABLE KEYS */;
-INSERT INTO `cat_razas` VALUES (1,'Schnauzer',1),(2,'Pug',1),(3,'Chihuahua',1),(4,'Salchicha',1),(5,'Husky',1),(6,'Bóxer',1),(7,'Beagle',1),(8,'Siamés',2),(9,'Ragdoll',2),(10,'Bengala',2),(11,'Azul ruso',2),(12,'Burmés',2),(13,'Egipcio',2),(14,'Korat',2);
+INSERT INTO `cat_razas` VALUES (1,'Schnauzer',1),(2,'Pug',1),(3,'Chihuahua',1),
+(4,'Salchicha',1),(5,'Husky',1),(6,'Bóxer',1),(7,'Beagle',1),(8,'Siamés',2),(9,'Ragdoll',2)
+,(10,'Bengala',2),(11,'Azul ruso',2),(12,'Burmés',2),(13,'Egipcio',2),(14,'Korat',2),(15,'Betta',3),(16,'Tetra Neon',3),
+(17,'Payaso',3),(18,'Joya',3),(19,'Angel',3),(20,'Limon',3),(21,'Guppys',3),(22,'Californiano',4),(23,'Cabeza de Leon',4)
+,(24,'Mini Rex',4),(25,'Mini Lop',4),(26,'Holandes',4);
 /*!40000 ALTER TABLE `cat_razas` ENABLE KEYS */;
 UNLOCK TABLES;
-
+describe cat_razas;
 --
 -- Table structure for table `cat_tipos`
 --
@@ -109,14 +121,14 @@ CREATE TABLE `cat_tipos` (
   PRIMARY KEY (`Id_Tipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
+select * from cat_tipos;
 --
 -- Dumping data for table `cat_tipos`
 --
 
 LOCK TABLES `cat_tipos` WRITE;
 /*!40000 ALTER TABLE `cat_tipos` DISABLE KEYS */;
-INSERT INTO `cat_tipos` VALUES (1,'Perro'),(2,'Gato'),(3,'Pez'),(4,'Conejo'),(5,'Conejo');
+INSERT INTO `cat_tipos` VALUES (1,'Perro'),(2,'Gato'),(3,'Pez'),(4,'Conejo');
 /*!40000 ALTER TABLE `cat_tipos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,11 +160,6 @@ CREATE TABLE `mascotas` (
 -- Dumping data for table `mascotas`
 --
 
-LOCK TABLES `mascotas` WRITE;
-/*!40000 ALTER TABLE `mascotas` DISABLE KEYS */;
-
-/*!40000 ALTER TABLE `mascotas` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `personas`
@@ -183,12 +190,13 @@ CREATE TABLE `personas` (
 --
 -- Dumping data for table `personas`
 --
-
 LOCK TABLES `personas` WRITE;
 /*!40000 ALTER TABLE `personas` DISABLE KEYS */;
-INSERT INTO `personas` VALUES (1,'ANGELITO','AAA','BBB','CCC','angelito','angel45604@gmail.com','1231234234',3,2);
+INSERT INTO `personas` VALUES (1,'ESME','AAA','BBB','CCC','159','merimtz45604@gmail.com','5567539315',3,2);
 /*!40000 ALTER TABLE `personas` ENABLE KEYS */;
 UNLOCK TABLES;
+select * from personas;
+
 
 --
 -- Table structure for table `rel_delegaciones_colonias`
@@ -256,3 +264,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-04-16 19:08:12
+select * from mascotas;

@@ -7,7 +7,7 @@
         <title>REGISTRO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <LINK REL=StyleSheet HREF="../DocumentosCSS/Estilos.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="../DocumentosCSS/ERegistroPersona.css" TYPE="text/css" MEDIA=screen>
         <script src="../JavaScript/Registro.js"></script>
     </head>
     <body>
@@ -55,9 +55,17 @@
             let colonias = [<%for(Model.Colonia colonia : colonias) {
                                 out.println("{id: "+colonia.getIdColonia()+", nombre: '"+colonia.getNom_Colonia()+"', delegacion: '"+colonia.getIdDelegacion()+"'},");
                             }%>]
-
             let coloniasFiltradas = []
             let select = document.getElementById("colonias") 
+            for (i = 0; i < select.options.length; i++) {
+                select.remove(i)
+            }
+            for (i = 0; i < select.options.length; i++) {
+                select.remove(i)
+            }
+            for (i = 0; i < select.options.length; i++) {
+                select.remove(i)
+            }
             for (i = 0; i < select.options.length; i++) {
                 select.remove(i)
             }

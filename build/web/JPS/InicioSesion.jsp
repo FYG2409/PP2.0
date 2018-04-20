@@ -43,15 +43,15 @@
                     int resultado = ps.getInt(3);
                     ps.close();
                     if(resultado==3){
-                        out.print("<script> alert('Usted a entrado');  document.getElementById('madopta').submit(); </script>");
+                        out.print("<script>document.getElementById('madopta').submit(); </script>");
                     }
                     else
                         if(resultado==4){
-                            out.println("<div><a href='../InicioDeSesion/InicioDeSesion.html'><center>CONTRASEÑA INCORRECTA</center></a></div>");
+                            out.println("<div><a href='../InicioDeSesion/InicioDeSesion.html'><center>ASEGURATE DE HABER ESCRITO BIEN TU CONTRASEÑA</center></a></div>");
                         }
                     else
                         if(resultado==5){
-                            out.println("<div><a href='../InicioDeSesion/InicioDeSesion.html'><center>EL REGISTRO NO EXISTE</center></a></div>");
+                            out.println("<div><a href='../InicioDeSesion/InicioDeSesion.html'><center>REVISA TU NOMBRE DE USUARIO</center></a></div>");
                         }
                 }catch(SQLException error) {
                     out.print(error.toString());
